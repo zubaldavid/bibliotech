@@ -1,6 +1,6 @@
 var { Pool } = require('pg');
 
-const CONNECTION_STRING = process.env.DATABASE_URL;
+const CONNECTION_STRING = process.env.DATABASE_URL || 'postgres://kejjhebbqjcaep:0fe74912c8847fdab37ded52b48fbfe33790ed63def36fb72f2b1165bc31ff90@ec2-75-101-131-79.compute-1.amazonaws.com:5432/d11ddlca8a7t2c';
 const SSL = process.env.NODE_ENV === 'production';
 
 class Database {
@@ -20,7 +20,8 @@ class Database {
   // Takes arguements and sends them to the database
   query (query, ...args) {
     this._pool.connect((err, client, done) => {
-      if (err) throw err;
+      if (err)
+        throw err;
       const params = args.length === 2 ? args[0] : [];
       const callback = args.length === 1 ? args[0] : args[1];
 
