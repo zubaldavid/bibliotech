@@ -1,0 +1,33 @@
+{
+  "name": "express-code-challenge",
+  "version": "1.0.0",
+  "description": "A coding challenge to assess your ability to navigate an express server implementation.",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon express-code-challenge"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.2.0",
+    "es6-promise": "^4.2.6",
+    "express": "^4.16.4",
+    "isomorphic-fetch": "^2.2.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.9.0",
+    "pg-connection-string": "^2.0.0",
+    "promise": "^8.0.3",
+    "requests": "^0.2.2",
+    "sequelize": "^5.2.7"
+  }
+}
